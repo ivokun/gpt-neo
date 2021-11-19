@@ -1,0 +1,9 @@
+{
+  "path": "gs://ivokun-lab-eu-west4/datasets/Custom/oscar_id_tokenized/oscar_id*.tfrecords",
+  "eval_path": "",
+  "n_vocab": 50257,
+  "tokenizer_is_pretrained": false,
+  "tokenizer_path": "data/gpt2tokenizer_id/byte-level-bpe.tokenizer.json",
+  "eos_id": 50256,
+  "padding_id": 50257
+}
