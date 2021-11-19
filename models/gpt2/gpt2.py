@@ -164,6 +164,8 @@ def model(mtf_features, other_features, params, mesh, variable_dtype, context=No
                          variable_dtype=variable_dtype,
                          context=context)
 
+        block_fn.trainable = False
+
         # If true and in train mode, enable gradient checkpointing
         recompute_grad = params["recompute_grad"] and (params["mode"] == "train") == True
         h, loss = block_fn(h) if not recompute_grad else mtf.recompute_grad(block_fn, [h])
